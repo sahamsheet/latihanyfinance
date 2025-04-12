@@ -5,7 +5,7 @@ import json
 
 # Konfigurasi Google Sheets API
 try:
-    with open('CREDSSHEET') as f:
+    with open('CREDSSHEET.json') as f:
         credentials_data = json.load(f)
 
     creds = ServiceAccountCredentials.from_json_keyfile_dict(credentials_data, ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive'])
