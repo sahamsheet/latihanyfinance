@@ -5,11 +5,11 @@ from oauth2client.service_account import ServiceAccountCredentials
 # Konfigurasi Google Sheets API
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name('nama_file_kredensial_anda.json', scope) #Ganti nama_file_kredensial_anda.json dengan nama file json anda.
+creds = ServiceAccountCredentials.from_json_keyfile_name('creds', scope) #Ganti nama_file_kredensial_anda.json dengan nama file json anda.
 client = gspread.authorize(creds)
 
 # Buka Google Sheet
-sheet = client.open('Nama Google Sheet anda').sheet1 #Ganti Nama Google Sheet anda dengan nama google sheet anda.
+sheet = client.open('yfinanceauto').sheet1 #Ganti Nama Google Sheet anda dengan nama google sheet anda.
 
 # Daftar saham
 saham = ['ADRO.JK', 'ITMG.JK', 'PTBA.JK']
